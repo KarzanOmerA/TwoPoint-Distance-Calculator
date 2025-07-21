@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Point Distance Calculator</title>
-    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiUG9pbnQgRGlzdGFuY2UgQ2FsY3VsYXRvciIsInNob3J0X25hbWUiOiJEaXN0YW5jZSBDYWxjIiwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMxZTE5MjYiLCJ0aGVtZV9jb2xvciI6IiMzYjgyZjYiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M00zdHZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQXlORGdnTWpRNElpQjNhV1IwYUQwaU1qUTRJaUJvWldsbmFIUTlJakkwT0NJK1BISmxZM1FnZUQwaU1qUWlJSGs5SWpJMElpQjNhV1IwYUQwaU1qQXdJaUJvWldsbmFIUTlJakl3TUNJZ2NuZzlJakV5SWlCbWFXeHNQU0lqTXpJNE1tWTJJaTgrUEhCaGRHZ2daRDBpVFRrMklqUTJMRGMxV0RBc01UQXdURGMxTERjMVdEQXNNVEF3ZEdNd0xDNDFMUzQxTERGY0xTNDFMVEZzTFRjMUxEY3lMMjQzTVMwM01pNDFZeTQxTFRBdU5UQXVOUzB4VERrc0xUUTJXaUlnWm1sc2JEMGlJell6TmpNMlpqTWlMejQ4TDNOMlp6ND0iLCJzaXplcyI6IjI0OHgyNDgiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XX0=">
+    <title>2 Point Distance Calculator</title>
+    <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiUG9pbnQgRGlzdGFuY2UgQ2FsY3VsYXRvciIsInNob3J0X25hbWUiOiJEaXN0YW5jZSBDYWxjIiwic3RhcnRfdXJsIjoiLyIsImRpc3BsYXkiOiJzdGFuZGFsb25lIiwiYmFja2dyb3VuZF9jb2xvciI6IiMxZTE5MjYiLCJ0aGVtZV9jb2xvciI6IiMzYjgyZjYiLCJpY29ucyI6W3sic3JjIjoiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M000dHZjbWN2TWpBd01DOXpkbWNpSUhacFpYZENiM2c5SWpBZ01DQXlORGdnTWpRNElpQjNhV1IwYUQwaU1qUTRJaUJvWldsbmFIUTlJakkwT0NJK1BISmxZM1FnZUQwaU1qUWlJSGs5SWpJMElpQjNhV1IwYUQwaU1qQXdJaUJvWldsbmFIUTlJakl3TUNJZ2NuZzlJakV5SWlCbWFXeHNQU0lqTXpJNE1tWTJJaTgrUEhCaGRHZ2daRDBpVFRrMklqUTJMRGMxV0RBc01UQXdURGMxTERjMVdEQXNNVEF3ZEdNd0xDNDFMUzQxTERGY0xTNDFMVEZzTFRjMUxEY3lMMjQzTVMwM01pNDFZeTQxTFRBdU5UQXVOUzB4VERrc0xUUTJXaUlnWm1sc2JEMGlJell6TmpNMlpqTWlMejQ4TDNOMlp6ND0iLCJzaXplcyI6IjI0OHgyNDgiLCJ0eXBlIjoiaW1hZ2Uvc3ZnK3htbCJ9XX0=">
     <style>
         * {
             margin: 0;
@@ -35,6 +35,20 @@
             color: #2d3748;
             font-size: 2.5rem;
             font-weight: 700;
+        }
+
+        .illustration-section {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .distance-illustration {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            background: white;
         }
 
         .upload-section {
@@ -209,7 +223,71 @@
 </head>
 <body>
     <div class="container">
-        <h1>📍 Point Distance Calculator</h1>
+        <h1>📍 2 Point Distance Calculator</h1>
+        
+        <!-- Illustration Section -->
+        <div class="illustration-section">
+            <svg class="distance-illustration" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background -->
+                <defs>
+                    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#f0f9ff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#e0f2fe;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge> 
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/> 
+                        </feMerge>
+                    </filter>
+                </defs>
+                
+                <rect width="300" height="150" fill="url(#bgGradient)" rx="10"/>
+                
+                <!-- Grid -->
+                <g stroke="#e2e8f0" stroke-width="0.5" opacity="0.5">
+                    <defs>
+                        <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="300" height="150" fill="url(#grid)" />
+                </g>
+                
+                <!-- Distance line -->
+                <line x1="60" y1="100" x2="240" y2="50" stroke="#667eea" stroke-width="3" opacity="0.8" stroke-dasharray="5,5">
+                    <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+                </line>
+                
+                <!-- Point P1 -->
+                <circle cx="60" cy="100" r="8" fill="#10b981" stroke="white" stroke-width="2" filter="url(#glow)">
+                    <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <text x="40" y="120" font-family="Arial" font-size="14" font-weight="bold" fill="#059669">P1</text>
+                <text x="25" y="135" font-family="Arial" font-size="10" fill="#6b7280">(X₁, Y₁)</text>
+                
+                <!-- Point P2 -->
+                <circle cx="240" cy="50" r="8" fill="#f59e0b" stroke="white" stroke-width="2" filter="url(#glow)">
+                    <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite" begin="1s"/>
+                </circle>
+                <text x="220" y="40" font-family="Arial" font-size="14" font-weight="bold" fill="#d97706">P2</text>
+                <text x="205" y="25" font-family="Arial" font-size="10" fill="#6b7280">(X₂, Y₂)</text>
+                
+                <!-- Distance label positioned above the line -->
+                <text x="150" y="55" font-family="Arial" font-size="12" font-weight="bold" fill="#667eea" text-anchor="middle">
+                    Distance
+                </text>
+                <text x="150" y="40" font-family="Arial" font-size="10" fill="#4f46e5" text-anchor="middle">
+                    √[(X₂-X₁)² + (Y₂-Y₁)²]
+                </text>
+                
+                <!-- Arrow pointing from formula to line -->
+                <path d="M 150 60 L 155 65 L 145 65 Z" fill="#667eea" opacity="0.7">
+                    <animateTransform attributeName="transform" type="translate" values="0 0;0 2;0 0" dur="1.5s" repeatCount="indefinite"/>
+                </path>
+            </svg>
+        </div>
         
         <div class="upload-section">
             <div class="upload-area" id="uploadArea">
